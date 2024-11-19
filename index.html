@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
+</head>
+
+<body>
+    <!-- Header Section Start -->
+    <header>
+        <a href="#" class="logo">Thor</a>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#education">Latar Belakang</a>
+            <a href="#experience">Pengalaman</a>
+            <a href="#contact">Kontak</a>
+        </nav>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Home Section Start -->
+    <section id="home" class="home">
+        <div class="home-img">
+            <img src="images/WhatsApp Image 2024-11-12 at 09.23.58.jpeg" alt="Home Image">
+        </div>
+        <div class="home-content">
+            <h1>Halo, Aku <span>Muhamad Sabil Thoriq Rinaldi</span></h1>
+            <h3 class="typing-text">I'm a Front End Development <span></span></h3>
+            <p>Saya seorang mahasiswa Institut Digital Ekonomi LPKIA.</p>
+            <div class="social-icons">
+                <a href="https://github.com/muhamadsabilthoriq"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/rinaldi_thoriq"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/thoriqrinaldi_/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="#" class="btn">Hire me</a>
+        </div>
+    </section>
+    <!-- Home Section End -->
+
+    <!-- Education Section Start -->
+    <section id="education" class="education">
+        <div class="education-content">
+            <h2>Latar Belakang</h2>
+            <p>Perkenalkan saya Muhamad Sabil Thoriq Rinaldi, mahasiswa ongoing Institut Digital Ekonomi LPKIA yang akan lulus dari program studi Sistem Informasi. Saya lahir di Bandung pada tanggal 20 November 2004.</p>
+        </div>
+        <div class="education-img">
+            <img src="images/WhatsApp Image 2024-11-18 at 20.30.14_b798bb57.jpg" alt="Education Image">
+        </div>
+    </section>
+    <!-- Education Section End -->
+
+<!-- Experience Section Start -->
+<section id="experience">
+    <div class="experience-content">
+        <h2>Pengalaman</h2>
+        <p>Pengalaman saya ahli dalam bahasa pemrograman lain contohnya Python, Java, JavaScript. Selain itu, saya mengembangkan soft skill dan mengembangkan web menggunakan HTML dan CSS. Saya sudah menguasai beberapa bahasa pemrograman, dan saya juga bisa bekerja dengan Team Work yang baik, serta mempunyai sikap kepemimpinan yang baik.
+           Selain itu saya mendapatkan Sertifikat Internasional MOS. 
+        </p>
+    </div>
+    <div class="experience-img">
+        <img src="images/SertiMos.jpg" alt="Experience Image">
+    </div>
+</section>
+<!-- Experience Section End -->
+
+
+    <!-- Contact Section Start -->
+    <section id="contact">
+        <h2>Kontak</h2>
+        <p>Email: <a href="230514009@fellow.lpkia.ac.id">230514009@fellow.lpkia.ac.id</a></p>
+        <p>Hubungi saya melalui media sosial atau email untuk diskusi lebih lanjut.</p>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer Section Start -->
+    <footer>
+        <p>&copy; 2024 Muhamad Sabil Thoriq Rinaldi. All rights reserved.</p>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- JavaScript untuk mengubah status aktif pada tombol navigasi -->
+    <script>
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
